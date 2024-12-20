@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  height: 300dvh;
+}
+
+header {
+  background: linear-gradient(58deg, #c74c20, #a41705 38%);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 50%;
+  margin-top: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  animation-name: sliderInDown;
+  animation-duration: 1500ms;
+  animation-timing-function: ease-in-out;
+
+  img {
+    width: 200px;
+    margin-bottom: 50px;
+  }
+}
+
+.img-moto {
+  width: 100vw;
+  height: 100dvh;
+
+  object-fit: cover;
+  position: fixed;
+}
+
+@keyframes sliderInDown {
+  from {
+    transform: translate3d(-50%, -100%, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+  }
+}
